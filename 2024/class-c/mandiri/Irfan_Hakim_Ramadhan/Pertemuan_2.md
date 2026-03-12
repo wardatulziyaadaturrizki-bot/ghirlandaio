@@ -1,2 +1,2 @@
-#AKonflik Karena Perbedaan Pandangan Antara Sains dan Agama
+ #Konflik Karena Perbedaan Pandangan Antara Sains dan Agama
 
