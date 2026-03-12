@@ -1,4 +1,4 @@
-# paper rangkuman 1
+# paper rangkuman 2
 Bersadarkan materi yang dipresentasikan oleh kelompok 1, hubungan antara sains dan agama berdasarkan pemikiran Yuval Noah Harari dalam buku Homo Deus: Masa Depan Umat Manusia. Sejak dahulu, kehidupan manusia dipengaruhi oleh cerita, mitos, dan keyakinan yang menjadi dasar terbentuknya sistem sosial, nilai moral, dan cara manusia memahami dunia. Dalam masyarakat kuno, agama berperan penting dalam menjelaskan fenomena alam sekaligus membangun kerja sama sosial.
 
 Agama juga membantu manusia membangun kepercayaan bersama sehingga mampu membentuk peradaban besar. Melalui keyakinan terhadap kekuatan ilahi, manusia dapat bekerja sama membangun kerajaan, kota, dan berbagai proyek besar. Dengan demikian, agama tidak hanya menjadi sistem kepercayaan, tetapi juga kekuatan sosial yang mempersatukan masyarakat.
