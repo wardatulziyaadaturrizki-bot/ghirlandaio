@@ -28,18 +28,43 @@ Kami menyadari bahwa makalah ini masih jauh dari sempurna. Oleh karena itu, krit
 
 ## DAFTAR ISI
 Kata Pengantar
+
 BAB I Pendahuluan 
+
+
 1.1 Latar Belakang
+
 1.2 Rumusan Masalah
+
 1.3 Tujuan Penulisan
+
 BAB II Pembahasan
+
 2.1 Posisi Teknologi sebagai mitos 
+
 2.2 Subtansi Teknologi dalam susdut pandang hiperrealitas
+
 2.3 Contoh kasus berdasarkan pengalaman pribadi terkait konsep teknologi dalam sudut pandang hiperrealitasasi
+
 2.4 Perbedaan antara teknologi sebagai mitos dan teknologi alat menggunakan pengalaman internal dan terpersonalisasi
+
 BAB III Penutup
+
 2.5 Kesimpulan 
+
 Daftar Pustaka.
+
+## BAB I 
+## PENDAHULUAN 
+
+1.1 Latar Belakang
+Perkembangan teknologi yang semakin pesat telah membawa perubahan besar dalam kehidupan manusia. teknologi Kini tidak hanya berperan sebagaia alat untuk mempermudah pekerjaan, Tetapi juga telah menjadi  bagian dari gaya hidup dan identitas sosial. Dalam kondisi ini, Teknologi sering kali di pandang sebagai sesuatu yang selalu membawa kemajuan dan solusi, sehingga tanpa disadari telah membentuk suatu "mitos modern" dalam masyarakat. Pandangan ini membuat manusia cenderung menerima teknologi secara apa adanya tanpa mempertanyakan dampak maupun konsekuensinya. 
+
+Selain itu, melalui pemikiran Jean Baudrillard, teknologi juga dipahami sebagai sarana yang mampu menciptakan hiperrialitas, yaitu kondisi dimana batas antara realitas dan simulasi menjadi kabur. Dalam Media Sosial misalnya, memungkinkan individu menampilkan versi diri yang telah dibentuk sedemikian rupa sehingga nampak lebih ideal dibandingkanrealitas sebenarnya. 
+
+Fenomena ini menimbulkan pergeseran cara manusia memahami dunia, dimana realitas yang ditampilkan melalui teknologi seringkali lebih dipercaya dibandingkan pengalaman nyata. Oleh karena itu, penting untuk mengkaji lebih dalam bagaimana teknologi berperan sebagai mitos sekaligus sebagai pembentuk himperrialitas. 
+
+## PENDAHULUAN 
 
 
 
