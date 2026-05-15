@@ -102,18 +102,60 @@ base dan linux-firmware itu penting untuk menjalankan linux base adalah dasar at
 neovim adalah teks editor untuk linux dan iwd adalah sistem network untuk linux 
 
 ### fstab 
-genfstab -U /mnt > /mnt/etc/fstab 
+> __genfstab -U /mnt  >> /mnt/etc/fstab__ 
 
 untuk mengenerated mana dulu yang akan di mount terlebih dahulu setelah bootloader 
 
-### CP network configuration 
+### CP network configuration form iwd 
 
-mkdir -p mnt/var/lib/iwd
-cp /var/lib/iwd/*.psk /mnt/var/lib/iwd/ 
+> __mkdir -p mnt/var/lib/iwd__ <br> 
+> __cp /var/lib/iwd/*.psk /mnt/var/lib/iwd/__ <br> 
 
 ini untuk mencopi configrasi iwd yang ada di boot environment sekarang 
 
-### CP network 
+### CP network system
+> __cp /etc/systemd/network/* /mnt/systemd/network__ 
+
+ini untuk copi systemd dari network di boot environment sekarang 
+
+### arch-chroot /mnt 
+untuk masuk ke dalam root sementara alias fake root 
+
+mengganti nama device __/hostname__ 
+> echo 'namakomputer kamu' > /etc/hostname <br> 
+> cat /etc/hostname untuk melihat reslute = namakomputer kamu <br>
+
+sinkornisasi waktu  __ln -sf__
+> ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime <br> 
+> hwclock --systohc <br>
+
+localization __locale-gen__ 
+> nvim /etc/locale.gen // ini untuk masuk ke config locale.gen cari commenting yang berkaitan dengan #en_us , kemudian uncomenting menjadi en_US <br>
+> generate menggunakan locale-gen
+> masukan ke config locale dengan locale > /etc/locale.conf
+> ubah lang=C menjadi lang=en_US.UTF-8 , begitu juga ALL=en_US.UTF-8
+
+WHOAMI? __[useradd,groupadd,sudoers.d/]__
+> __useradd__ gunanya untuk menambahkan usser <br> 
+> __groupadd__ untuk menambahkan etential group <br>
+> __sudoers.d/__ direktori atau tempat untuk mengizinkan __sudo__ atau user untuk melakukan sesuatu terhadap command dan __terminal__ dengan __% group__ atau __ALL=(ALL:ALL) ALL__, izin sudoers terhadap user tertentu, berbentuk akses <br>
+> __passwd__ sebagai bentuk prefentif atau security untuk user terhadap terminal dan perintah sudo 
+>EXAMPLE ; <br> 
+>  __useradd -m -G aditional-gruop -s /bin/bash__ jeremy <br> 
+> __passwd__ jeremy <br> 
+> __EDITOR=nvim visudo /etc/sudoers.d/administrator-gruop__  // kamu masuk ke direktori sudoers dan mengizinkan user untuk melakukan sudo terhadap terminal untuk sistem perintah <br> 
+> setelah masuk maka masukan __%administrator-gruop ALL=(ALL:ALL) ALL__ untuk semua yang ada dalam kategori group administrator atau __jeremy ALL=(ALL:ALL) ALL__ untuk per satu orang <br>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
