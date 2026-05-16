@@ -38,6 +38,10 @@ Wassalamu’alaikum Wr. Wb.
 
 ## 1.1 Latar Belakang
 
+Arch Linux adalah distribusi GNU/Linux serbaguna x86-64 yang dikembangkan secara independen dan berupaya menyediakan versi stabil terbaru dari sebagian besar perangkat lunak dengan mengikuti model rilis bergulir (rolling release) . Komunitas Arch telah tumbuh dan matang menjadi salah satu distribusi Linux yang paling populer dan berpengaruh, yang juga dibuktikan oleh perhatian dan ulasan yang diterima selama bertahun-tahun. Selain beberapa pengecualian tertentu, para pengembang Arch tetap merupakan sukarelawan paruh waktu yang tidak dibayar, dan tidak ada prospek untuk memonetisasi Arch Linux, sehingga akan tetap gratis dalam segala arti kata. 
+
+dalam  menginstall desktop Arch Linux terdapat beberapa komponen penting yang harus di pasang. Komponen  itu terdiri dari NetworkManager adalah program yang menyediakan deteksi dan konfigurasi untuk sistem agar dapat terhubung ke jaringan secara otomatis; KDE Plasma proyek perangkat lunak yang saat ini terdiri dari lingkungan desktop; PipeWire adalah kerangka kerja multimedia tingkat rendah yang baru. Tujuannya adalah untuk menawarkan perekaman dan pemutaran audio dan video dengan latensi minimal dan dukungan untuk aplikasi berbasis PulseAudio , JACK , ALSA , dan GStreamer; Dolphin adalah pengelola file bawaan KDE; Kitty adalah emulator terminal berbasis OpenGL yang dapat diprogram dengan fitur TrueColor, dukungan ligatur, ekstensi protokol untuk input keyboard, dan rendering gambar. Ia juga menawarkan kemampuan tiling, seperti GNU Screen atau tmux. Dengan begitu, materi ini bertujuan untuk memberikan penjelasan tentang proses installasi desktop Arch Linux sehingga kita dapat mengetahui bagaimana sebuah sistem desktop Linux dibangun. 
+
 ## 1.2 Rumusan Masalah
 
 ## 1.3 Tujuan Masalah
