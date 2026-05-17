@@ -55,6 +55,7 @@ Informasi ini penting karena langkah instalasi bootloader pada tahap akhir akan 
 **Perbedaan UEFI atau BIOS**
 
 
+
 **2.3 Perintah Awal di Live Environment**
 
 Setelah berhasil masuk ke menu UEFI atau Boot Menu, langkah selanjutnya adalah memilih flashdisk bootable yang berisi file instalasi Arch Linux sebagai perangkat boot utama. Setelah dipilih, komputer akan memulai booting dari flashdisk dan menampilkan halaman awal Arch Linux. Pada tahap ini pengguna memilih opsi “Arch Linux install medium” untuk menjalankan live environment Arch Linux. Jika proses berhasil, sistem akan masuk ke tampilan terminal dengan prompt seperti ```root@archiso``` yang menandakan bahwa live environment Arch Linux sudah aktif dan siap digunakan untuk proses instalasi, seperti mengecek koneksi internet, membuat partisi disk, memformat partisi, dan menginstal sistem operasi ke penyimpanan komputer.
@@ -67,13 +68,27 @@ Untuk terhubung ke internet, pastikan interface jaringan sudah aktif dengan peri
 
 iwcl merupakan
 
+
 **2.5 Singkronisasi Waktu**
 
 Waktu sistem yang akurat penting dalam proses instalasi untuk mencegah kegagalan verifikasi paket dan kesalahan sertifikat TLS (Transport Layer Security). Layanan systemd-timesyncd sudah aktif secara default dan akan otomatis menyinkronkan waktu begitu internet terhubung. Untuk memastikan waktu sudah tersinkronisasi, jalankan perintah timedatectl.
 
 Layanan systemd-timesyncd merupakan
 
+
 **2.6 Partisi Diks**
+**Partisi Boot**
+
+Merupakan
+
+**Partisi Swap**
+
+Merupakan
+
+**Partisi Root**
+
+Merupakan
+
 
 Saat sistem live berjalan, disk yang terpasang di komputer akan otomatis terdeteksi dan diberi nama perangkat blok seperti ```/dev/sda```, ```/dev/nvme0n1```, atau ```/dev/mmcblk0```. Untuk melihat daftar disk yang tersedia dapat menggunakan perintah ```lsblk``` atau ```fdisk -l```.
 
