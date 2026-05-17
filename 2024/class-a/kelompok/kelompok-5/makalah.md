@@ -22,6 +22,17 @@ Namun, proses instalasi Arch Linux memerlukan pemahaman mengenai perintah termin
 
 
 ## Pembahasan
+### 1. Persiapan sebelum instalasi
+
+
+### 2. Instalasi
+
+
+### 3. Konfigurasi sistem
+
+
+### 4. Reboot
+
 
 ## Penutup
 
