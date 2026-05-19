@@ -10,7 +10,7 @@ Panduan ini juga dibuat sebagai bentuk dokumentasi dari tugas mata kuliah Perpus
 
 Langkah pertama yang perlu dilakukan adalah mengunduh Archiso.
 
-Buka situs __archlinux.org/download__, lalu scroll ke bawah hingga menemukan bagian Indonesia dan pilih __citrahost.com__ sebagai mirror unduhan.
+Buka situs __[archlinux.org/download](https://archlinux.org/download/)__, lalu scroll ke bawah hingga menemukan bagian Indonesia dan pilih __[citrahost.com](https://mirror.citrahost.com/archlinux/iso/2026.05.01/)__ sebagai mirror unduhan.
 
 ---
 
@@ -26,7 +26,7 @@ Lalu, klik yang muncul ke dua dalam baris, yaitu __archlinux-2026.05.01-x86_64.i
 
 ---
 
-Setelah file Arch Iso berhasil diunduh, langkah berikutnya adalah mengunduh __Rufus__. ketik __rufus.ie/id/__ untuk mengakses situs Rufus berbahasa indonesia, lalu klik unduh untuk melakaukan pengunduhan.
+Setelah file Arch Iso berhasil diunduh, langkah berikutnya adalah mengunduh __Rufus__. ketik __[rufus.ie/id/](https://rufus.ie/id/)__ untuk mengakses situs Rufus berbahasa indonesia, lalu klik unduh untuk melakaukan pengunduhan.
 
 ---
 
@@ -70,22 +70,29 @@ Setelah muncul seperti, lanjut klik __OK__ untuk menaruh Archiso. (Gunakan flash
 Jika sudah selesai proses sebelumnya, klik __close__.
 
 
-Untuk partisi cek disk management (windows + x)
+Untuk mengecek partisi, buka __Disk Management__ dengan menekan tombol __Windows + X__ atau mengklik kanan mouse pada ikon Windows di taskbar, Lalu pilih opsi tersebut dari menu yang muncul. 
 
 
-Cek berapa partisi yang kosong
+Selanjutnya, Periksa berapa banyak ruang partisi yang tersedia atau masih kosong.
 
-Kalo udah pencet yang capacity paling banyak lalu klik kanan pakai shrink volume
 
+Setelah itu, pilih partisi dengan kapasitas terbesar, lalu klik kanan dan pilih opsi __Shrink Volume__
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/ab5ee5bd-a7f4-4d55-bd09-ee20e37da779" />
 
-Kalau masih banyak gunakan saja 50000, yaitu terbaca 50GB, Lalu shrink
+---
 
+Jika ruang yang tersedia masih cukup besar, disarankan memasukkan nilai 50000 (setara dengan 50GB) pada kolom yang tersedia, lalu klik __Shrink__.
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/938ada5e-6fac-49fb-9f66-4087ac2fa757" />
 
-Kira kira seperti ini kalau sudah dipartisi, namun kita akan membuat partisi di arch
+---
+
+Kurang lebih seperti inilah tampilan setelah partisi berhasil dibuat. Namun, kita akan melanjutkan proses pembuatan partisi lebih lanjut di dalam Arch Linux.
 
 Masuk ke entering setup cari di google menyesuaikan laptop, Akses BIOS dengan menekan F1 saat logo Lenovo muncul, buka tab Security > Secure Boot, ubah menjadi disabled, lalu simpan dengan F10, Otomatis mereboot device. (Jika berbeda cari kembali di google menyesuaikan laptop)
 
