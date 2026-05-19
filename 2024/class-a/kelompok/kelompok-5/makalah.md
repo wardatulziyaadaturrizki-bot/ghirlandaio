@@ -31,6 +31,7 @@ Langkah pertama yaitu mengunduh file ISO (International Organization for Standar
 File ISO merupakan file image yang berisi salinan sistem operasi dalam satu file, termasuk kernel Linux, installer, sistem boot, drive, dan berbagai paket yang diperlukan untuk menjalankan instalasi.
 
 ### 2. Instalasi
+
 **2.1 Membuat Bootable Flashdisk**
 
 Memindahkan file ISO ke flashdisk dilakukan menggunakan Terminal (Linux & macOS) atau aplikasi Rufus atau Balena Etcher untuk membuat flashdisk menjadi bootable sehingga dapat digunakan sebagai media instalasi sistem operasi.
@@ -135,6 +136,7 @@ Untuk partisi EFI (harus menggunakan FAT32), format ke FAT32 menggunakan perinta
 Perlu diperhatikan, format partisi EFI hanya dilakukan jika partisi tersebut baru saja dibuat. Jika sebelumnya sudah ada partisi EFI di disk dari sistem operasi lain, jangan diformat ulang karena dapat merusak bootloader sistem operasi tersebut.
 
 **Mount Filesystem**
+
 setelah partisi diformat, langkah selanjutnya memasang (mount) partisi ke dalam sistem agar installer dapat mengaksesnya. pertama untuk partisi root ke ```/mnt```:
 
 ```mount /dev/root_partition /mnt```
@@ -228,7 +230,7 @@ menggunakan GRUB sebagai bootloader dan mendownload efibootmgr untuk manage uefi
 
 Setelah semua konfigurasi selesai dilakukan di dalam lingkungan chroot, langkah selanjutnya adalah keluar dari lingkungan tersebut sebelum melakukan restart.
 
-Cara  keluar dari croot, ketik ```exit```, setelah itu melepas semua partisi yang sebelumnya di-mount pada /mnt menggunakan perintah ```unmount -R /mnt```dan setelahnya ketik ```reboot`` serta lepas USB installer setelah restart.
+Cara  keluar dari croot, ketik ```exit```, setelah itu melepas semua partisi yang sebelumnya di-mount pada /mnt menggunakan perintah ```unmount -R /mnt```dan setelahnya ketik ```reboot``` serta lepas USB installer setelah restart.
 
 
 
