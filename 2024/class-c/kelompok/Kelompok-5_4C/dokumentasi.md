@@ -44,13 +44,15 @@ https://github.com/user-attachments/assets/04ccc2bb-7ae9-4079-8077-a58033916058
 
 ## Memulai
 
-Tahap awal dimulai dengan memasukkan flashdisk ke laptop, kemudian klik tombol __Select__ dan pilih fle Archiso yang sudah diunduh sebelumnya. Untuk bagian __Partition Scheme__, laptop keluaran baru umumnya sudah menggunakan __GPT__.  
+Tahap awal dimulai dengan memasukkan flashdisk ke laptop, kemudian klik tombol __Select__ dan pilih file Archiso yang sudah diunduh sebelumnya. Untuk bagian __Partition Scheme__, laptop keluaran baru umumnya sudah menggunakan __GPT__.  
 
 __Diperlukan:__
 - **USB Drive:** Minimal kapasitas 2GB (direkomendasikan 4GB atau lebih).
 
 __Perhatian!__
 - Proses ini akan menghapus **SELURUH DATA** di dalam USB drive.
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/c6cdf2fa-bfdc-4ba4-9240-5993030daca3" />
 
@@ -98,64 +100,112 @@ Kurang lebih seperti inilah tampilan setelah partisi berhasil dibuat. Namun, kit
 Selanjutnya, Masuk ke __Entering Setup__ (cara masuk nya dapat dicari di Google sesuai tipe dan merk laptop masing-masing, sebagai contoh untuk modul dokumentasi ini kelompok kami menggunakan laptop Lenovo). Akses BIOS dengan menekan __F1__ saat logo Lenovo muncul, kemudian buka tab Security -> Secure Boot dan ubah statusnya menjadi __Disabled__.  Simpan perubahan dengan menekan __F10__, dan perangkat akan otomatis melakukan reboot.
 
 
-Setelah itu, masuk ke Boot Menu dengan menekan F12 (khusus p
+Setelah itu, masuk ke Boot Menu dengan menekan __F12__ (khusus untuk pengguna Lenovo Thinkpad, selain itu dapat mencari lebih lanjut di google untuk cara Boot Menu di berbagai tipe dan merk laptop berbeda) pastikan flashdisk sudah tercolok dan telah berisi file Archiso sebelumnya.
 
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/5a149ab2-6ed8-42c2-9fcb-051c2aa6c577" />
 
-> Pencet usb
+---
 
+> Setelah itu akan muncul tampilan seperti ini, pencet pilihan USB
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/92555886-552a-4826-8e01-1026f12e737d" />
 
-> Pencet enter
+---
 
+> Pencet enter di keyboard
 
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/94602b06-99fa-48d0-9708-41540148c7dc" />
 
-> Tunggu sampai tampilan seperti ini lalu ketik iwctl
+---
+
+> Tunggu sampai tampilan seperti ini lalu ketik:
+```bash
+iwctl
+```
+
+---
 
 # Kondisi Khusus
 
-Ketika device list di iwctl tidak terlihat wlan0 wlan1 dan semacamnya,ketik rfkill list
+Apabila daftar perangkat di __iwctl__ tidak menampilkan __wlan0__, __wlan1__, atau yang sejenisnya, dapat mengetik perintah:
+```bash
+rfkill list
+```
 
+untuk memeriksa status perangkat jaringan.
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/0e30f0bd-392d-434a-926d-051a9fdc5393" />
 
-Contoh seperti ini, lalu ketik rfkill unblock wlan, Semisal ingin mengunblock bluetooth ketik saja unblock bluetooth
+---
 
-Ketik device list
+Contoh dari perintah tersebut akan terlihat seperti ini. Selanjutnya, ketikkan perintah: 
+```bash
+rfkill unblock wlan
+```
 
+Perintah ini digunakan untuk mengaktifkan perangkat WiFi. Jika ingin mengaktifkan Bluetooth, cukup ketikkan:
+```bash
+rfkill unblock bluetooth
+```
+
+Setelah itu dapat dilanjut dengan mengetik:
+```bash
+device list
+```
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/25b6ef19-b6f1-49a0-8b40-269feecce651" />
 
-Station wlan(0)(menyesuaikan name di tabel)
+---
 
-Contoh: 
+Selanjutnya akan muncul tampilan __Station wlan(0)(menyesuaikan name di tabel)__
 
+Setelah itu, sambungkan perangkat dengan koneksi Wi-Fi (Disarankan menggunakan Wi-Fi yang berkoneksi cepat dan stabil). Sambungkan dengan cara mengetik perintah:
 ```bash
-Station wlan0 connect (nama wifi)
+station wlan0 connect (nama wifi)
 ```
+__Contoh:__
+- station wlan0 connect wifirumahh
 
-Kalo ada spasi dalam nama wifi memakai petik terlebih dahulu, Contoh "uin fah"
 
+Apabila nama WiFi mengandung spasi, pastikan untuk mengapit nama tersebut dengan tanda petik (") terlebih dahulu.
+
+
+__Contoh:__
+- station wlan0 connect "uin fah"
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/74161428-1d8f-429d-8d0d-db4d143604c7" />
 
-Masukan password
+---
 
-lalu enter saja
+Setelah mengetik perintah untuk menyambungkan ke koneksi WiFi, masukkan password WiFi yang akan disambungkan.
 
-Cek jaringan yaitu dengan mengetik 
 
+Lalu klik key __Enter__ di keyboard.
+
+
+Jika sudah mengetik password dengan benar, exit terlebih dahulu dengan mengetik:
+```bash
 exit
+```
 
-Terlebih dahulu lalu
-
+lanjutkan dengan memeriksa koneksi jaringan dengan mengetikkan perintah: 
 ```bash
 ping 8.8.8.8
 ```
+
+---
 
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/5090e3f0-8037-4aff-b1b7-a37ba61bf03c" />
 
