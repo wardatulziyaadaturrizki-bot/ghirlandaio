@@ -49,20 +49,44 @@ Di live environment anda dapat melihat disk yang dibagi menjadi *block device* s
 ```
 fdisk -l
 ```
+cari disk mana yang mau dipartisi
+masuk ke disk yang mau dipartisi
 
-Mirror
+sesuaikan dengan layout ini
+<img width="937" height="271" alt="image" src="https://github.com/user-attachments/assets/0ae7bdc3-e491-449b-976c-05096373697e" />
+
+https://wiki.archlinux.org/title/Partitioning#Example_layouts
+
+## Format partisi
+
+## Mirror
+jika diperlukan semisalnya downloadnya masih lambat
 ```
 nano /etc/pacman.d/mirrorlist
 ```
-packages penting
+## Install packages penting
+
+paket untuk basic linux kernel dan perangkat keras secara umum
+```
+pacstrap -K /mnt base linux linux-firmware
+```
+paket yang sudah dikustomisasi untuk laptop saya
 ```
 pacstrap -K /mnt base linux linux-firmware amd-ucode networkmanager nano sudo grub efibootmgr os-prober dosfstools mtools ntfs-3g man-db man-pages texinfo sof-firmware
 ```
-fstab
+### fstab
+agar Agar nanti setelah Arch Linux di-boot, sistem tahu format partisi disk yang disk ada dimana
+dibuatlah file
+```
+/etc/fstab
+```
+```fstab``` adalah daftar partisi yang harus otomatis dimount saat Linux menyala
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
+
 chroot
+untuk ke system environmt 
 ```
 arch-chroot /mnt
 ```
@@ -147,7 +171,13 @@ Use the ```grub-mkconfig tool``` to generate ```/boot/grub/grub.cfg```:
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
-reboor
+Reboot
+```
+exit
+```
 ```
 umount -R /mnt
+```
+```
+reboot
 ```
