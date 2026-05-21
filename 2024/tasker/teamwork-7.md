@@ -13,7 +13,7 @@ Presentator mampu melakukan dan menjelaskan installasi desktop arch linux
 | dekstop         | dwm             |
 | file manager    | super file      |
 | disk layout     | CIS             |
-| container       | podman          |
+| container       | podman, podman desktop          |
 | firewall        | ip tables       |
 | multimedia      | mpd, mpc, mpv   |
 | password        | keepass xc      |
