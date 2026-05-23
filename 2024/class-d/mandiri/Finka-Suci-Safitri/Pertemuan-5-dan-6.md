@@ -31,9 +31,9 @@ Step 8: delete semua
 Step 9: ‘new’
 
 Step 10: 
-1G untuk boot type efi system
-4G untuk swap, type linux swap
-14G root, type linux filesystem (memo)
+1G untuk boot type efi system,
+4G untuk type linux swap,
+14G untuk type linux filesystem (memo)
 
 Step 11: 
 - pencet 'write’
