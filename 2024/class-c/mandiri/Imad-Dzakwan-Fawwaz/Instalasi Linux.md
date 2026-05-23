@@ -169,7 +169,7 @@
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/2aac3a95-4dd4-4258-8898-820d25a7f55d" />
 
 ---
-
----
 ### Langkah 42
 <img width="1280" height="820" alt="image" src="https://github.com/user-attachments/assets/c7c7585e-8574-4223-8bf7-3b37edf3ec88" />
+
+---
