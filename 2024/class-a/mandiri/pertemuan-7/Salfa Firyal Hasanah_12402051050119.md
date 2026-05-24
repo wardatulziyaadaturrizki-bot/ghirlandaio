@@ -1,7 +1,7 @@
 Salfa Firyal Hasanah (12402051050119) Absen 34 Kelas 4A
 
 
-#Dokumentasi Instalisasi Archlinux# 
+# Dokumentasi Instalisasi Archlinux
 
 
 
