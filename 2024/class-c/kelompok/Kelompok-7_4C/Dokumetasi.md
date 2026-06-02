@@ -1,4 +1,4 @@
-# Dokumentasi Instalasi Arch Linux dengan Disk Layout CIS Kelompok 7 Kelas 4-C
+# Dokumentasi Instalasi Arch Linux dengan Disk Layout CIS dan Enkripsi LUKS ON LVM Kelompok 7 Kelas 4-C
 
 ---
 ## CONNECT WIFI
@@ -28,9 +28,9 @@ ping 8.8.8.8
 ```
 
 ---
-## CHECKING PARTISI
+## MEMBUAT PARTISI
 Lakukan pengecekan dan pembagian partisi dengan langkah-langkah berikut.
-![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.38.32.jpeg)
+
 Cek partisi.
 ```
 lsblk
@@ -59,10 +59,10 @@ lsblk
 
 Melakukan setup LVM.
 ```
-pvcreate /dev/(partisi root)
+pvcreate /dev/(partisi)
 ```
 ```
-vgcreate (nama grup) /dev/(partisi root)
+vgcreate (nama grup) /dev/(partisi)
 ```
 
 **Membuat logical volume**
@@ -73,26 +73,24 @@ lvcreate -L size (G | M) (nama grup) -n root
 lvcreate -L size (G | M) (nama grup) -n vars
 ```
 ```
-lvcreate -L size (G | M) (nama grup) -n vtmp
-```
-```
 lvcreate -L size (G | M) (nama grup) -n vlog
 ```
 ```
 lvcreate -L size (G | M) (nama grup) -n vaud
 ```
 ```
-lvcreate -L size (G | M) (nama grup) -n root
+lvcreate -L size (G | M) (nama grup) -n vtmp
 ```
 ```
 lvcreate -L size (G | M) (nama grup) -n home
 ```
 ```
-lvcreate -l50%FREE (nama grup) -n root (nama)
+lvcreate -l50%FREE (nama grup) -n root (user)
 ```
 > -l50%FREE adalah 50% dari sisa ruang yang akan digunakan.
 
-**Formatting**
+---
+## FORMATTING PARTITION
 ![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.38.31(1).jpeg)
 Format partisi BOOT.
 ```
@@ -107,19 +105,16 @@ mkfs.ext4 /dev/(nama grup)/root
 mkfs.ext4 /dev/(nama grup)/vars
 ```
 ```
-mkfs.ext4 /dev/(nama grup)/vtmp
-```
-```
 mkfs.ext4 /dev/(nama grup)/vlog
 ```
 ```
 mkfs.ext4 /dev/(nama grup)/vaud
 ```
 ```
+mkfs.ext4 /dev/(nama grup)/vtmp
+```
+```
 mkfs.ext4 /dev/(nama grup)/home
-```
-```
-mkfs.ext4 /dev/(nama grup)/(nama)
 ```
 
 Melakukan setup LUKS
@@ -127,14 +122,9 @@ Melakukan setup LUKS
 ```
 cryptsetup luksFormat /dev/(nama grup)/(nama)
 ```
-```
-cryptsetup luksOpen /dev/(nama grup)/(nama) (nama device)
-```
-```
-mkfs.ext4 /dev/mapper/(nama device)
-```
 
-**Melakukan mounting**
+---
+## MOUNTING
 ![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.38.29(1).jpeg)
 Mounting partisi grup root.
 ```
@@ -160,12 +150,12 @@ mount --mkdir -o rw,nodev,nosuid,noexec,relatime /dev/(nama grup)/vlog /mnt/var/
 mount --mkdir -o rw,nodev,nosuid,noexec,relatime /dev/(nama grup)/vaud /mnt/var/log/audit
 ```
 ```
-mount --mkdir -o rw,nodev,nosuid,noexec,relatime /dev/(nama grup)/home /mnt/home
+mount --mkdir -o rw,nodev,nosuid,relatime /dev/(nama grup)/home /mnt/home
 ```
 
 ---
 ## Instalasi Packages
-Melakukan instalasi package yang disesuaikan dengan prosesor laptop.
+> Melakukan instalasi package yang disesuaikan dengan prosesor laptop.
 ![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.38.29(2).jpeg)
 **Intel**
 ```
@@ -229,25 +219,43 @@ nvim /etc/locale.conf
 ```
 
 ---
-### Pam_mount
-**Menambahkan User**
-![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.38.24.jpeg)
+### LUKS OPEN
+
+```
+cryptsetup luksOpen /dev/(nama grup)/(partisi user) (user)
+```
+
+Format partisi user
+```
+mkfs.ext4 /dev/mapper/(user)
+```
+
+Cek kembali partisi
+
+```
+lsblk
+```
+---
+## HOME USER DIRECTORY
+
 ```
 mkdir /home/user
 ```
+
 ```
-useradd -d  /home/user (nama user)
-passwd (nama user)
+useradd -d /home/user (nama user)
 ```
+
 ```
 chown -R (nama user):(nama user) /home/user
 ```
+
 ```
-passwd
+passwd (nama user)
 ```
-> Kata sandi harus sama dengan LUKS untuk partisi ini.
+
 ```
-echo '(nama user) ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/none
+echo "(nama user) ALL=(ALL:ALL)" > /etc/sudoers.d/(nama user)
 ```
 
 **Config volume**
@@ -368,11 +376,12 @@ add value
 network:
   dhcp: on
 universal: false
-modules: -*,ext4
+modules: -*,ext4,nvme
 extra_files: fsck,fsck.ext4
 strip: true
 enable_lvm: true
 ```
+> Untuk `modules: -*,ext4,nvme` disesuaikan dengan tipe harddisk komputer, jika bertipe `nvme` samakan dan jika `sda atau sdb` tidak perlu tambahkan `nvme`
 
 ![alt text](https://raw.githubusercontent.com/Rafly-87/Studying/refs/heads/main/arch-xfce/WhatsApp%20Image%202026-05-25%20at%2008.37.47.jpeg)
 ```
@@ -418,7 +427,7 @@ default  booster.conf
 bootctl --graceful update
 ```
 ```
-pacman -S xfce4 sddm pipewire pipewire-pulse pipewire-jack pipewire-alsa
+pacman -S xfce4 sddm pipewire pipewire-pulse pipewire-jack pipewire-alsa network-manager-applet
 ```
 
 ## Booting
