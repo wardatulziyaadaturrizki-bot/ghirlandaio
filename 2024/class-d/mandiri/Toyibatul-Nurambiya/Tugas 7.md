@@ -1,4 +1,4 @@
-# Resume Kelompok 7 
+# Resume Kelompok 7
 
 ## Nama: Toyibatul Nurambiya
 
