@@ -1,4 +1,3 @@
-# Dokumentasi Penginstalan Arch Linux
 ## Nama: Fatma Ramadhani
 ## NIM: 12402051050157
 ## Mata Kuliah: Perpustakaan dan Arsip Digital
@@ -15,5 +14,6 @@
 9.	Password (KeePass XC): Ini buat manajemen password server-server kita. Di dalamnya kita bisa simpan database password yang terenkripsi. Malah algoritmanya sudah dukung buat jadi autentikator (kayak Google Authenticator), jadi bisa buat simpan kode OTP juga.
 10.	Key (Secret): Fungsinya mirip sama KeePass, tapi lebih buat otomasi SSH key. Jadi pas kita login user, kuncinya langsung di-load otomatis. Pas kita mau push data ke server, kita nggak perlu input password atau kunci secara manual lagi karena sudah diambil otomatis sama aplikasi ini.
 11.	Access (OpenSSH): Ini standar industri buat ngendaliin atau ngeremote komputer lain dari jarak jauh secara aman. Jadi kita bisa connect dari laptop kerja kita ke server di tempat lain tanpa harus pakai metode password yang nggak aman.
+
 Intinya alat-alat di atas dipakai buat mastiin standar keamanan kita kuat. Seperti yang kita tahu, dalam dunia security itu, prinsipnya lebih baik data itu hancur atau hilang daripada bocor ke tangan orang yang nggak berwenang.
 
