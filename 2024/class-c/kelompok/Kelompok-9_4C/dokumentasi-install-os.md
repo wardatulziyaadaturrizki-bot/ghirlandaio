@@ -139,11 +139,14 @@ lspci
 > untuk melihat jenis hardware
 
 ```
-pacstrap /mnt intel-ucode base pacman sudo linux-lts linux-lts-headers lvm2 mkinitcpio linux-firmware-intel docker neovim git iwd asciinema
+pacstrap /mnt intel-ucode base pacman sudo linux-lts linux-lts-headers lvm2 mkinitcpio linux-firmware-intel docker neovim git iwd asciinema firefox linux-firmware-realtek firewalld
 ```
 # regist partisi
 ```
 genfstab -U /mnt > /mnt/etc/fstab
+```
+```
+echo "tmpfs /tmp tmpfs defaults,rw,nosuid,nodev,noexec,relatime,size=1G 0 0" >> /mnt/etc/fstab
 ```
 # chroot
 ```
@@ -206,7 +209,7 @@ cd /boot
 mkdir kernel efi
 ```
 ```
-cd /efi
+cd efi
 ```
 ```
 mkdir linux
@@ -221,7 +224,7 @@ mv vmlinuz-* intel-* kernel
 rm -fr initramfs-*
 ```
 ```
-mv /etc/mkinicpio.conf /etc/mkinitcpio.d/default.conf
+mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
 ```
 ```
 nvim /etc/mkinitcpio.d/default.conf
