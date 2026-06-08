@@ -43,9 +43,13 @@ Konfigurasi apache untuk file utama terletak di
 ```
 /etc/httpd/conf/httpd.conf
 ```
-
+https://wiki.archlinux.org/title/Apache_HTTP_Server
 Pastikan MPM Event dan modul berikut aktif:
+
+
 <img width="492" height="126" alt="image" src="https://github.com/user-attachments/assets/60bd6bcf-88d1-497b-b44c-4dd774ebcdc6" />
+
+
 ```
 LoadModule mpm_event_module modules/mod_mpm_event.so
 ```
@@ -121,6 +125,8 @@ https://httpd.apache.org/docs/current/zh-cn/sitemap.html
 ```
 masukan folder web di sini
 
+
+https://wiki.archlinux.org/title/Apache_HTTP_Server#Using_php-fpm_and_mod_proxy_fcgi
 
 php-fpm-legacy
 
@@ -399,6 +405,6 @@ https://www.youtube.com/watch?v=GYnmm97bPxg
 
 https://httpd.apache.org/docs/current/zh-cn/sitemap.html
 
-https://www.redhat.com/en/blog/linux-file-permissions-explained?utm_source=chatgpt.com
+https://www.redhat.com/en/blog/linux-file-permissions-explained
 
 
