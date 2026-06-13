@@ -296,28 +296,39 @@ nvim /etc/modprobe.d/hardening.conf
 
 ```
 install    cramfs           /bin/false
-blacklist  cramfs
+
 
 install    freexfs          /bin/false
-blacklist  freexfs
+
 
 install    hfs              /bin/false
-blacklist  hfs
+
 
 install    hfsplus          /bin/false
-blacklist  hfsplus
+
 
 install    jffs2            /bin/false
-blacklist  jffs2
+
 
 install    udf              /bin/false
-blacklist  udf
+
 
 install    fire-wire-core   /bin/false
-blacklist  fire-wire-core
+
 
 install    usb_storage      /bin/false
-blacklist  usb_storage
+
+```
+selanjutnya ketik : 
+```
+mkinitcpio -P
+```
+cek list module :
+```
+lsmod
+```
+```
+lsmod | grep namamodule
 ```
 
 ## setup firewalld
