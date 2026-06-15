@@ -117,7 +117,7 @@ echo "khaila" > /etc/hostname
 ```
 >setelah echo buat nama hostname
 
-## Mengatur waktu
+## Mengatur waktu dan bahasa
 ```
 ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 ```
@@ -126,7 +126,8 @@ hwclock --systohc
 ```
 ```
 nvim /etc/locale.gen
->search en_US menggunakan simbol / lalu hapus tanda pagar pada en_US.UTS-8 UTF-8 dan en_US ISO-8859-1
+```
+>search en_US menggunakan simbol / lalu hapus tanda pagar pada en_US.UTF-8 UTF-8 dan en_US ISO-8859-1
 ```
 ```
 locale-gen
@@ -137,7 +138,7 @@ locale > /etc/locale.conf
 ```
 nvim /etc/locale.conf
 ```
->LAN=C.UTF-8 ganti menjadi LANG=en_US.UTF-8 lalu dibagian LC_ALL= tambahkan en_US.UTF-8
+>LANG=C.UTF-8 ganti menjadi LANG=en_US.UTF-8 lalu dibagian LC_ALL= tambahkan en_US.UTF-8
 
 ## membuat user
 ```
