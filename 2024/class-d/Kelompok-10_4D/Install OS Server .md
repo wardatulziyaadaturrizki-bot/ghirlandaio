@@ -7,15 +7,15 @@ iwctl
 ```
 device list
 ```
-** Cek driver wifi setiap laptop
+**Cek driver wifi setiap laptop
 ```
 station wlan0 get-network
 ```
-** Melihat jaringan yang tersedia
+**Melihat jaringan yang tersedia
 ```
 station wlan0 scaan
 ```
-** Memindaai jaringan yang ada
+**Memindaai jaringan yang ada
 ```
 station wlan0 connect "(nama wifi)"
 exit
@@ -24,11 +24,11 @@ exit
 ```
 lsblk
 ```
-Membagi partisi
+**Membagi partisi
 ```
 cfdiks /dev/partisi [sda/nvme0n1p1]
 ```
-minimal partisi
+**minimal partisi
 ```
 boot = 3G [EFI system}
 root = 95G [Linux filesystem]
@@ -53,7 +53,7 @@ pvcreate /dev/mapper/[nama device]
 ```
 vgcreate [nama grup] /dev/mapper/[nama device]
 ```
-Membuat Logical Volume
+## Membuat Logical Volume
 ```
 lvcreate -L 8GB [nama grup] -n root
 ``````
@@ -166,7 +166,7 @@ hwclock --systohc
 ```
 nvim /etc/locale.gen
 ```
-agar pencarian lebih cepat, bisa mengklik tanda "/"
+**agar pencarian lebih cepat, bisa mengklik tanda "/"
 ```
 locale-gen
 ```
@@ -223,7 +223,7 @@ Use 'cat' to create an uncompressed image.
 ```
 nvim /etc/mkinitcpio.d/linux-lts.preset
 ```
-ikutin yang ada di sini
+**ikutin yang ada di sini
 ```
 ALL_config="/etc/nkinitcpio.d/default.conf"
 ALL kuer="/boot/kernel/vmlinuz-linux-lts"
@@ -246,14 +246,14 @@ sfallback_config="/etc/nkinitcpio.conf"
 ```
 bootctl --path=/mnt/boot install
 ```
-untuk yang bukan lenovo bisa lanjut ke tahap betikutnya, tetapi khusu device lenovo disarankan mengikuti ini:
+**untuk yang bukan lenovo bisa lanjut ke tahap betikutnya, tetapi khusus device lenovo disarankan mengikuti ini:
 ```
 exit
 ```
 ```
 bootctl --path=/mnt/boot install
 ```
-kemudian masuk kembali ke sistem
+**kemudian masuk kembali ke sistem
 ```
 arch-chroot /mnt
 ```
@@ -273,14 +273,14 @@ exit
 ```
 umount -R /mnt
 ```
-mematikan asciinema
+**mematikan asciinema
 ```
 ctrl+d
 ```
 ```
 asciinema upload [nama file],cast
 ```
-foto link asciinema
+**foto link asciinema
 ```
 reboot
 
