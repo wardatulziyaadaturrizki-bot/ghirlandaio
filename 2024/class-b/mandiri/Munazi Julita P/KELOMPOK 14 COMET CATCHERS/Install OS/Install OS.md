@@ -49,8 +49,8 @@ lsblk
 
 ## Format partisi
 ```
-mkfs.ext4 /dev/comet/root
 mkfs.vfat -F32 /dev/partisi boot
+mkfs.ext4 /dev/comet/root
 mkfs.ext4 /dev/comet/vars
 mkfs.ext4 /dev/comet/vlog
 mkfs.ext4 /dev/comet/vaud
@@ -125,23 +125,26 @@ touch /etc/cmdline.d/{01-boot.conf,02-misc.conf}
 lsblk
 ```
 
+```
 cat /etc/cmdline.d/01-boot.conf
 echo “rd.luks.name=$(blkid -s UUID -o value /dev/partisi boot)=proc root=/dev/comet/root” > /etc/cmdline.d/01-boot.conf
 echo rw > /etc/cmdline.d/02-misc.conf
+```
+
+```
 nvim /etc/mkinitcpio.conf
-
 bagian HOOKS akhir tambahin (sd-encrypt lvm2)
+```
 
+
+```
 nvim /etc/mkinitcpio.d/linux-lts.conf.preset
 = mkinitcpio preset file for the 'linux-lts' package
 ALL_config="/etc/mkinitepio.conf"
 ALL_kver="/boot/vmlinuz-linux-Its"
 ALL_kerneldest="/boot/vmlinuz-linux-lts"
-
-
 PRESETS=( 'default')
 #PRESETS=('default' ‘fallback')
-
 #default_config="/etc/mkinitcpio.conf”
 #default_image="/boot/initramfs-linux-lts.img”
  default_uki="/boot/EFI/Linux/arch-linux-lts.efi"
@@ -149,17 +152,33 @@ PRESETS=( 'default')
 #fallback_config=”/etc/mkinitcpio.conf”
 #fallback_image="/boot/initramfs-linux-lts-fallback.img “
 #fallback_uki=”/efi/EFI/Linux/arch-linux-lts-fallback.efi"
-#fallback_options="-S autodetect”
+#fallback_options="-S autodetect” ```
+```
 
-
-
+```
 bootctl –path=/boot install
+```
+
+```
 mkinitcpio -P 
+```
+
+```
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 systemctl enable iwd 
 systemctl enable firewalld
 systemctl enable sshd
+```
+
+```
 exit
+```
+
+```
 umount -R /mnt
+```
+
+```
 reboot
+```
