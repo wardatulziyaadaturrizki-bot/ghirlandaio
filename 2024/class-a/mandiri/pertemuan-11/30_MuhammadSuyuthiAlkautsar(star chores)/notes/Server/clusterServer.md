@@ -14,3 +14,5 @@ Dalam sebuah cluster, terdapat controller (seperti load balancer) yang bertugas 
 
 # Pentingnya Klastering
 Penggunaan cluster sangat penting agar layanan publik atau situs web tetap stabil saat menerima banyak request sekaligus
+
+https://www.youtube.com/watch?v=bwHpD_vOd6A
