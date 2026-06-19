@@ -73,4 +73,13 @@ mount --mkdir -o rw,nodev,nosuid,relatime /dev/saw/podman /mnt/var/lib/container
 pacstrap /mnt base intel-ucode linux-lts linux-lts-headers linux-firmware mkinitcpio lvm2 git neovim firewalld openssh \ sudo pacman wget curl grep iwd podman
 ```
 
-7. 
+7. Konfigurasi Chroot
+```
+
+arch-chroot /mnt
+```
+
+8. Install Bootloader
+```
+
+
