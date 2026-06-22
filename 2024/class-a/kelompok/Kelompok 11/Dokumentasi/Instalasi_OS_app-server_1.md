@@ -1,7 +1,7 @@
 # Install OS APP
 
 
-## 1. Rekam Inst
+## 1. Record
 
 ```bash
 asciinema rec nama.cast
