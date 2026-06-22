@@ -267,6 +267,8 @@ Setelah itu dia akan balik ke root, untuk mengecek hostname ketik:
 cat /etc/hostname
 ```
 
+Kemudian set timezone
+
 ```bash
 ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 ```
