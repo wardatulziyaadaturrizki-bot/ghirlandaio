@@ -21,6 +21,7 @@ Anda adalah seorang Pegawai di perpustakaan Daerah, karena ada kebijakan Satu da
 - Aplikasi yang di install adalah slims 
 - Memastikan keamanan sistem komputer dikonfigurasikan secara ketat
 - Memastikan performa sistem komputer dalam performa terbaik
+- Menggunakan kernel linux hardened
 - Indikator penilaian minimum adalah implementasi tingkat keamanan dan performa yang telah di pelajari
 
 
@@ -30,6 +31,7 @@ Anda adalah seorang Pegawai di perpustakaan Daerah, karena ada kebijakan Satu da
 - Aplikasi yang di install adalah arteri
 - Memastikan keamanan sistem komputer dikonfigurasikan secara ketat
 - Memastikan performa sistem komputer dalam performa terbaik
+- Menggunakan kernel linux hardened
 - Indikator penilaian minimum adalah implementasi tingkat keamanan dan performa yang telah di pelajari
 
 
@@ -37,12 +39,14 @@ Anda adalah seorang Pegawai di perpustakaan Daerah, karena ada kebijakan Satu da
 - Aplikasi yang di install adalah atom
 - Memastikan keamanan sistem komputer dikonfigurasikan secara ketat
 - Memastikan performa sistem komputer dalam performa terbaik
+- Menggunakan kernel linux hardened
 - Indikator penilaian minimum adalah implementasi tingkat keamanan dan performa yang telah di pelajari
 
 ## Kelas D
 - Aplikasi yang di install adalah omeka
 - Memastikan keamanan sistem komputer dikonfigurasikan secara ketat
 - Memastikan performa sistem komputer dalam performa terbaik
+- Menggunakan kernel linux hardened
 - Indikator penilaian minimum adalah implementasi tingkat keamanan dan performa yang telah di pelajari
 
 
