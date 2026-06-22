@@ -1,4 +1,4 @@
-# Install OS APP
+# Install OS APP (Hardened)
 
 
 ## 1. Record
