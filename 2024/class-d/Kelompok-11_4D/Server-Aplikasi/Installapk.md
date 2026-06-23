@@ -1,4 +1,5 @@
-## Percobaan Install #Pertama
+## Percobaan Install OMEKA
+## Pertama
 
 ## Omeka podman
 ```
@@ -54,7 +55,8 @@ podman ps -a
 ```
 GAGAL TOTAL :((
 
- ## Percobaan Install #Kedua
+ ## Percobaan Install OMEKA
+ # Kedua
  ```
 spacman -S apache mariadb php-fpm unzip php-apache php-intl imagemagick
 ```
