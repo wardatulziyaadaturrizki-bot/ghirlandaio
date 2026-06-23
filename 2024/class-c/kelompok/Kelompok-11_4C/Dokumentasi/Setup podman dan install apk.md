@@ -5,7 +5,7 @@
 sudo systemctl enable –global podman
 ```
 ```
-sudo nvim /etc/containers/registrai
+sudo nvim /etc/containers/registries
 ```
 ```
 sudo nvim /etc/sysctl.d/[custome].conf
