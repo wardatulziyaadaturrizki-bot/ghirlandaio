@@ -1,11 +1,29 @@
 ## Setup podman dan install apk
 
 # server1
+
+## Install podman compose
+```
+sudo pacman -S podman-compose
+```
+
+```
+rm -fr atom
+```
+```
+mkdir container
+```
+```
+cd container/
+```
+```
+nvim storage.conf
+```
 ```
 sudo systemctl enable –global podman
 ```
 ```
-sudo nvim /etc/containers/registries
+sudo nvim /etc/containers/registries.conf
 ```
 ```
 sudo nvim /etc/sysctl.d/[custome].conf
@@ -20,25 +38,16 @@ kernel.unprevillaged_userns_clone = 1
 ```
 sudo sysctl –system
 ```
-## Membuat folder untuk apk
-
-```
-sudo su
-```
-**Membuat folder menyimpan apk**
-```
-mkdir [namafolder]
-```
-## Mindahin file
-```
-cd [namafolder]
-```
 
 **Bisa ke browser ketik atom compose 2.9 buat docker compose yang commandnya:**
 
 ```
 git clone -b qa/2.X https://github.com/artefactual/atom.git atom
 ```
+```
+cd atom
+```
+
 **mengecek file yang sudah didownload tadi dengan menggunakan command**
 
 ```
@@ -58,9 +67,27 @@ podman compose -f docker /docker-compose.dev.yml up -d
 podman ps -a
 ```
 *buat ngecek atom nya ada isinya atau engga*
+
+## Install overlay
 ```
-systemctl stop firewalld
+sudo pacman -S fuse-overlayfs
 ```
+```
+nvim docker/docker-compose.dev.yml
+```
+## Cek filesystem
+
+```
+df -h
+```
+```
+cat /etc/fstab
+```
+## Jalankan ulang container
+```
+podman compose -f docker/docker-compose.dev.yml up -d
+```
+
 ```
 masuk kebrowser, masukin http://[ip server:63001]
 ```
