@@ -32,6 +32,9 @@ Implementasi teknologi informasi membutuhkan pustakawan dan arsiparis yang memil
 **3. Kualitas Data dan Efektivitas Sistem Temu Kembali Informasi**
 Masalah yang sering muncul adalah ketidaksesuaian data dalam sistem dengan kondisi koleksi atau arsip yang sebenarnya, data hasil migrasi yang belum diperbarui, serta fitur pencarian yang kurang efektif. Hal ini menyebabkan pengguna kesulitan menemukan informasi secara akurat dan cepat.
 
+
 http://repository.uinjkt.ac.id/dspace/handle/123456789/408
+
 http://repository.uinjkt.ac.id/dspace/handle/123456789/18917
+
 http://repository.uinjkt.ac.id/dspace/handle/123456789/9735
