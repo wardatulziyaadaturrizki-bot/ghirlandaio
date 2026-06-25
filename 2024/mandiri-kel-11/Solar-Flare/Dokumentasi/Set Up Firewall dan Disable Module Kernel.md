@@ -98,6 +98,20 @@ lsmod | grep usb_storage
 nvim /etc/modprobe.d/01-custom.conf
 ```
 > untuk membuka file konfigurasi modul kernel
+
+> ketik commant
+```
+install bluetooth /bin/false
+```
+```
+blacklist bluetooth
+```
+```
+install usb_storage /bin/false
+```
+```
+blacklist usb_storage
+```
 ## Membuat ulang initramfs
 ```
 mkinitcpio -P

@@ -1,0 +1,3 @@
+# HOW TO INSTALL OS SERVER 1
+
+## 1. 

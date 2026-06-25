@@ -66,7 +66,33 @@ firewall-cmd --reload
 firewall-cmd --list-all-zone
 ```
 
+## Menghapus SSH dari zone External
+```
+firewall-cmd --zone=external --remove-service=ssh --permanent
+```
 
+## Menghapus SSH dari zone DMZ
+```
+firewall-cmd --zone=dmz --remove-service=ssh --permanent
+```
+
+## Reload firewall
+```
+firewall-cmd --reload
+```
+## Menghapus service pada NM-Shared
+```
+firewall-cmd --zone=nm-shared --remove-service={dhcp,dns,ssh} --permanent
+```
+## Reload firewall
+```
+firewall-cmd --reload
+```
+
+## Cek kembali apakah semua list yang tadi dihapus masih ada atau tidak
+```
+firewall-cmd --list-all-zone
+```
 
 
 

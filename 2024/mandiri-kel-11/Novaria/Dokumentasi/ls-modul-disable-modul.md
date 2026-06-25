@@ -1,4 +1,4 @@
-# cek modul yang ingin kita disable
+# Cek modul yang ingin kita disable
 ```
 lsmod | grep cramfs
 ```
@@ -12,7 +12,7 @@ lsmod | grep hfsplus
 lsmod | grep jffs2
 ```
 ```
-lsmod | grep sqaushhfs
+lsmod | grep squashhfs
 ```
 ```
 lsmod | grep udf
@@ -24,7 +24,7 @@ lsmod | grep firewire-core
 lsmod | grep usb-storage
 ```
 ```
-lsmod | grep blueetoth
+lsmod | grep bluetooth
 ```
 
 # bila setelah di lsmod ada systax, itu perlu disable
