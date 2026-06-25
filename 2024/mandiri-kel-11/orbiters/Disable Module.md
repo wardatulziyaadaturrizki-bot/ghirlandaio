@@ -1,4 +1,4 @@
-## MD Disable Module
+## Disable Module
 ```
 lsmod | grep cramfs
 ```
