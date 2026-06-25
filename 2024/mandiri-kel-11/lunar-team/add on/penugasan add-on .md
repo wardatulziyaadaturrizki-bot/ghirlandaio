@@ -30,12 +30,21 @@ Meskipun berbagai teknologi informasi telah diterapkan, pemanfaatannya masih bel
 
 ### Sumber:
 http://repository.uinjkt.ac.id/dspace/handle/123456789/427
+
 http://repository.uinjkt.ac.id/dspace/handle/123456789/51322
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/64565
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/45841
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/78307
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/78603
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/37695
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/85701
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/71674
+
 https://repository.uinjkt.ac.id/dspace/handle/123456789/29227
