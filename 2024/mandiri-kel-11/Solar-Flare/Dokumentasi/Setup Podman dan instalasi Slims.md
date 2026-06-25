@@ -114,11 +114,23 @@ sudo nvim /etc/containers/registries.conf
 ```
 cari baris ke-21 dan uncommenting serta masukkan dalam kurung ["docker.io, quai.io"]
 
+## Cek Subuid Dan Subgid
+```
+nvim /etc/subuid
+```
+```
+nvim /etc/subgid
+```
+> Isi Dengan [user]:100000:65536  
+
 ## Running Compose
 ```
 podman compose up -d
 ```
-cek
-'''
+Pull dulu jika belum bisa lalu podman compose up -d
+```
+podman pull docker.io/mysql:5.7
+```
+```
 podman ps
-'''
+```
