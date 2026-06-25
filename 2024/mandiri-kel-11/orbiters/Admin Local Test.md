@@ -40,14 +40,14 @@ nvim /var/lib/iwd/(nama wifi).psk
 # add configuration below 
 
 
-## [Security]
+[Security]
 ```
 PreSharedKey=07409fc91b7d66d914529af1eb1d74c9d2538cfa561d3593d 
 Passphrase-=
 SAE-PT-Group19=ff700b20ff1dce97b0df773194aee24b7bef4aa14719daafi bd93ad00 
 SAE-PT-Group20=50829b3d9e6af5939189411ddfb739b6d0e99f 1b847c46ee66f3939 
 ```
-## [IPv4]
+ [IPv4]
 ```
 Address=192.168.1.13
 Netmask=255.255.255.0
