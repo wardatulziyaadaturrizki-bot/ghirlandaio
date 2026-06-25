@@ -12,8 +12,7 @@ mkdir files
 ls                                                                                                                                                    
 config  files  
 ```
-```
-chmod -R 777 /config                                                                                                                                                         
+```                                                                                                                                                      
 chmod -R 777 config/                                                                                                                                  
 chmod -R 777 files/
 ```
