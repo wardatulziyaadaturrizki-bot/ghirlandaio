@@ -22,7 +22,7 @@ exit
 ```
 ping 8.8.8.8
 ```
-### Meninstall Kernel Linux Hardened
+### Menginstall Kernel Linux Hardened
 ```
 pacman -S linux-hardened linux-hardened-headers
 ```
@@ -34,15 +34,14 @@ nvim /etc/mkinitcpio.d/linux-lts.preset
 nvim /etc/mkinitcpio.d/linux-hardened.preset
 ```
 
-> hapus semua # lalu tambahkan:
+ hapus semua # lalu tambahkan:
 
 ```
 - ALL_config="/etc/mkinitcpio.conf"
 - ALL_kver="/boot/vmlinuz-linux-hardened"
 - ALL_kerneldest="/boot/kernel/vmlimuz-linux-hardened"
 
-- BAGIAN ENIH GANTI #default_image="/boot/initramfs-linux-hardened.img"
-- MENJADI default_uki="/boot/efi/Linux/arch-linux-hardened.efi"
+- #default_image="/boot/initramfs-linux-hardened.img" UBAH MENJADI - default_uki="/boot/efi/Linux/arch-linux-hardened.efi"
 ```
 ### Generate initramfs
   ```
