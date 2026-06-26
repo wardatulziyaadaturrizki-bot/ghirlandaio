@@ -10,7 +10,7 @@ ssh force @127.0.0.1
 ```
 ```
 sudo su
-```
+
 **Masukkan password**
 Cek status firewall aktif atau tidak
 ```
