@@ -179,6 +179,3 @@ sudo nginx -t
 ```bash
 sudo nvim /etc/nginx/nginx.conf
 ```
-
-
-# SET UP ACCESS POINT DI SERVER 1 DAN 2 
